@@ -49,11 +49,11 @@ section[data-testid="stSidebar"] {
 }
 
 .main-title {
-    font-size: 56px;
-    font-weight: 900;
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 46px;
+    font-weight: 800;
+    color: #1e293b !important;
+    background: none !important;
+    -webkit-text-fill-color: #1e293b !important;
     margin-bottom: 8px;
 }
 
