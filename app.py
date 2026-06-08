@@ -1142,6 +1142,7 @@ elif page == "User Testing Survey":
 # =====================
 
 elif page == "Project Info":
+
     st.header("🚀 Project Info")
 
     st.write("""
@@ -1160,33 +1161,45 @@ Core Features:
 - User testing survey system
 """)
 
-   st.markdown("""
-## Project Description
+    st.subheader("Project Description")
 
-Zhihan Lin
+    st.write("""
+**Zhihan Lin**  
+Founder & Lead Developer, StudyPilot AI
 
-Designed and developed a Python-based academic planning platform...
+Designed and developed a Python-based academic planning platform that helps students manage assignments, prioritize workloads, predict grade recovery goals, track study habits, and generate personalized study recommendations.
+
+Built using Streamlit, SQLite, data analytics, PDF reporting, and optional AI integration to solve real student time-management problems. Conducted user testing with classmates and used feedback to improve usability and functionality.
 """)
+
     st.subheader("Research + Testing Plan")
 
     st.write("""
-1. Survey 50-100 students about homework stress, procrastination, and grade recovery needs.
-2. Ask 20-50 classmates to test StudyPilot AI.
+1. Survey 50–100 students about homework stress, procrastination, and grade recovery needs.
+
+2. Ask 20–50 classmates to test StudyPilot AI.
+
 3. Collect feedback using the built-in User Testing Survey.
+
 4. Compare before/after results:
-   - missing assignments
-   - late work
-   - study hours
-   - perceived organization
-5. Add results to GitHub README and college application portfolio.
+   - Missing assignments
+   - Late work
+   - Study hours
+   - Perceived organization
+
+5. Add results to GitHub README and project portfolio.
 """)
 
     st.subheader("Deployment Plan")
 
     st.write("""
 1. Push code to GitHub.
-2. Create requirements.txt.
-3. Deploy with Streamlit Cloud.
-4. Add screenshots and demo video to README.
-5. Share the link with classmates for testing.
+
+2. Create and maintain requirements.txt.
+
+3. Deploy the application using Streamlit Cloud.
+
+4. Add screenshots, documentation, and demo video to the README.
+
+5. Share the application with classmates for testing and feedback.
 """)
