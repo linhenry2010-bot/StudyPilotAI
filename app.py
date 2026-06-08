@@ -49,12 +49,13 @@ section[data-testid="stSidebar"] {
 }
 
 .main-title {
-    font-size: 46px;
-    font-weight: 800;
+    font-size: 48px;
+    font-weight: 600;
     color: #1e293b !important;
     background: none !important;
     -webkit-text-fill-color: #1e293b !important;
     margin-bottom: 8px;
+    line-height: 1.2;
 }
 
 .subtitle {
