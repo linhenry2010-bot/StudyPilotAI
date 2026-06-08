@@ -171,6 +171,21 @@ h1, h2, h3, h4, p, span {
     color: #166534;
     font-weight: 800;
 }
+
+/* Download button */
+
+.stDownloadButton button,
+.stDownloadButton button * {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 16px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    height: 50px !important;
+    box-shadow: 0 8px 20px rgba(99,102,241,0.35) !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
