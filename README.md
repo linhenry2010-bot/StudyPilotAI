@@ -1,0 +1,2 @@
+# StudyPilotAI
+AI Homework Planner
