@@ -1068,11 +1068,13 @@ elif page == "Weekly Report PDF":
 elif page == "User Testing Survey":
     st.header("🧪 User Testing Survey V4")
 
-   st.write("Your responses serve as important evidence for evaluating the usability, effectiveness, and real-world impact of StudyPilot AI.")
+    st.write(
+        "Your responses serve as important evidence for evaluating the usability, effectiveness, and real-world impact of StudyPilot AI."
+    )
 
     with st.form("survey_form"):
         student_name = st.text_input("Tester Name")
-        grade_level = st.selectbox("Grade Level", ["9", "10", "11", "12", "Other"])
+        grade_level = st.selectbox("Grade Level", ["9","10","11","12","Other"])
         ease = st.slider("How easy was the app to use?", 1, 5, 4)
         usefulness = st.slider("How useful was the app?", 1, 5, 4)
         recommend = st.slider("How likely are you to recommend it?", 1, 5, 4)
