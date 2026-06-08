@@ -82,20 +82,50 @@ label,
     font-weight: 600 !important;
 }
 
-.stButton > button {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+/* ===== FIX ALL BUTTONS ===== */
+
+.stButton button,
+.stFormSubmitButton button,
+button[kind="primary"] {
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    ) !important;
+
     color: white !important;
+
     border: none !important;
+
     border-radius: 16px !important;
-    font-weight: 800 !important;
-    min-height: 48px;
-    box-shadow: 0 10px 24px rgba(99,102,241,0.35);
+
+    font-weight: 700 !important;
+
+    font-size: 16px !important;
+
+    height: 50px !important;
+
+    width: 100% !important;
+
+    box-shadow: 0 8px 20px rgba(99,102,241,0.35) !important;
 }
 
-.stButton > button:hover {
+.stButton button *,
+.stFormSubmitButton button *,
+button[kind="primary"] * {
+    color: white !important;
+}
+
+.stButton button:hover,
+.stFormSubmitButton button:hover,
+button[kind="primary"]:hover {
+
     transform: translateY(-2px);
+
     transition: 0.2s ease;
-    box-shadow: 0 14px 30px rgba(99,102,241,0.45);
+
+    box-shadow: 0 14px 30px rgba(99,102,241,0.45) !important;
 }
 
 .card,
