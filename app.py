@@ -1164,8 +1164,8 @@ Core Features:
     st.subheader("Project Description")
 
     st.write("""
-**Zhihan Lin**  
-Founder & Lead Developer, StudyPilot AI
+
+Founder Zhihan Lin — High school student passionate about using technology to solve real student problems. Created StudyPilot AI to help students manage academic stress and improve time management.
 
 Designed and developed a Python-based academic planning platform that helps students manage assignments, prioritize workloads, predict grade recovery goals, track study habits, and generate personalized study recommendations.
 
