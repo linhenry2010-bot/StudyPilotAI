@@ -1068,7 +1068,7 @@ elif page == "Weekly Report PDF":
 elif page == "User Testing Survey":
     st.header("🧪 User Testing Survey V4")
 
-    st.write("Use this page when classmates test your app. Their feedback becomes project evidence.")
+   st.write("Your responses serve as important evidence for evaluating the usability, effectiveness, and real-world impact of StudyPilot AI.")
 
     with st.form("survey_form"):
         student_name = st.text_input("Tester Name")
@@ -1165,7 +1165,7 @@ Core Features:
 
     st.write("""
 
-Founder Zhihan Lin — High school student passionate about using technology to solve real student problems. Created StudyPilot AI to help students manage academic stress and improve time management.
+Founder: Zhihan Lin — High school student passionate about using technology to solve real student problems. Created StudyPilot AI to help students manage academic stress and improve time management.
 
 Designed and developed a Python-based academic planning platform that helps students manage assignments, prioritize workloads, predict grade recovery goals, track study habits, and generate personalized study recommendations.
 
