@@ -37,6 +37,11 @@ st.markdown("""
     color: #1e293b;
 }
 
+header,
+[data-testid="stHeader"] {
+    background: #f8fbff !important;
+}
+
 section[data-testid="stSidebar"] {
     background: rgba(255,255,255,0.92);
     backdrop-filter: blur(18px);
@@ -82,49 +87,33 @@ label,
     font-weight: 600 !important;
 }
 
-/* ===== FIX ALL BUTTONS ===== */
-
 .stButton button,
 .stFormSubmitButton button,
+.stDownloadButton button,
 button[kind="primary"] {
-
-    background: linear-gradient(
-        135deg,
-        #6366f1,
-        #8b5cf6
-    ) !important;
-
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
     color: white !important;
-
     border: none !important;
-
     border-radius: 16px !important;
-
     font-weight: 700 !important;
-
     font-size: 16px !important;
-
-    height: 50px !important;
-
-    width: 100% !important;
-
+    min-height: 50px !important;
     box-shadow: 0 8px 20px rgba(99,102,241,0.35) !important;
 }
 
 .stButton button *,
 .stFormSubmitButton button *,
+.stDownloadButton button *,
 button[kind="primary"] * {
     color: white !important;
 }
 
 .stButton button:hover,
 .stFormSubmitButton button:hover,
+.stDownloadButton button:hover,
 button[kind="primary"]:hover {
-
     transform: translateY(-2px);
-
     transition: 0.2s ease;
-
     box-shadow: 0 14px 30px rgba(99,102,241,0.45) !important;
 }
 
@@ -171,91 +160,11 @@ h1, h2, h3, h4, p, span {
     color: #166534;
     font-weight: 800;
 }
-
-/* Download button */
-
-.stDownloadButton button,
-.stDownloadButton button * {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 16px !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    height: 50px !important;
-    box-shadow: 0 8px 20px rgba(99,102,241,0.35) !important;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
-# =====================
-# DATABASE
-# =====================
-
 conn = sqlite3.connect("studypilot_v4.db", check_same_thread=False)
 cursor = conn.cursor()
-
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS users(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE,
-    password TEXT,
-    created_at TEXT
-)
-""")
-
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS assignments(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT,
-    name TEXT,
-    subject TEXT,
-    hours REAL,
-    difficulty INTEGER,
-    due_date TEXT,
-    completed INTEGER DEFAULT 0,
-    created_at TEXT
-)
-""")
-
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS exams(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT,
-    exam_name TEXT,
-    subject TEXT,
-    exam_date TEXT
-)
-""")
-
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS study_logs(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT,
-    subject TEXT,
-    minutes INTEGER,
-    log_date TEXT,
-    notes TEXT
-)
-""")
-
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS survey_results(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT,
-    student_name TEXT,
-    grade_level TEXT,
-    ease_of_use INTEGER,
-    usefulness INTEGER,
-    would_recommend INTEGER,
-    feedback TEXT,
-    created_at TEXT
-)
-""")
-
-conn.commit()
-
 
 # =====================
 # HELPER FUNCTIONS
@@ -1251,14 +1160,13 @@ Core Features:
 - User testing survey system
 """)
 
-    st.subheader("College Application Description")
+   st.markdown("""
+## Project Description
 
-    st.write("""
-Founder & Lead Developer, StudyPilot AI
+Zhihan Lin
 
-Designed and developed a Python-based academic planning platform that helps students manage assignments, prioritize workloads, predict grade recovery goals, track study habits, and generate personalized study recommendations. Built the project using Streamlit, SQLite, data analytics, PDF reporting, and optional AI API integration to solve real student time-management problems. Conducted user testing with classmates and used feedback to improve usability and functionality.
+Designed and developed a Python-based academic planning platform...
 """)
-
     st.subheader("Research + Testing Plan")
 
     st.write("""
