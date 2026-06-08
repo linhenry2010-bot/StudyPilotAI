@@ -33,189 +33,116 @@ st.set_page_config(
 st.markdown("""
 <style>
 .stApp {
-    background: linear-gradient(
-        135deg,
-        #f8fbff 0%,
-        #eef6ff 35%,
-        #e0f2fe 70%,
-        #dbeafe 100%
-    );
+    background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 40%, #dbeafe 100%);
+    color: #1e293b;
 }
 
-.stTextInput input,
-.stNumberInput input,
-.stDateInput input {
+section[data-testid="stSidebar"] {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(18px);
+    border-right: 1px solid #dbeafe;
+}
 
-    background: rgba(255,255,255,0.1) !important;
+.main-title {
+    font-size: 56px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
 
-    color: #111827 !important;
+.subtitle {
+    color: #475569 !important;
+    font-size: 20px;
     font-weight: 600;
-}
-    border: 1px solid rgba(255,255,255,0.2) !important;
-
-    border-radius: 12px;
+    margin-bottom: 28px;
 }
 
 label,
 .stTextInput label,
+.stTextArea label,
 .stNumberInput label,
 .stDateInput label,
-.stSlider label {
-
-    color: white !important;
-
+.stSlider label,
+.stRadio label {
+    color: #1e293b !important;
     font-size: 16px !important;
-
-    font-weight: 600 !important;
-}
-
-section[data-testid="stSidebar"] {
-
-    background:
-    rgba(15,23,42,0.95);
-
-    backdrop-filter: blur(30px);
-
-    border-right:
-    1px solid rgba(255,255,255,0.08);
-}
-.main-title {
-    font-size: 64px;
-    font-weight: 900;
-    background: linear-gradient(
-        90deg,
-        #2563eb,
-        #7c3aed
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-    color: #475569;
-    font-size: 20px;
-}
-
-.card {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(15px);
-    border-radius: 24px;
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
-
-.card:hover{
-
-    background: rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(25px);
-
-    border:1px solid rgba(255,255,255,0.12);
-
-    border-radius:24px;
-
-    padding:24px;
-
-    box-shadow:
-    0 8px 32px rgba(0,0,0,0.3);
-
-    transition:0.3s;
-}
-.card:hover{
-    transform:translateY(-5px);
-}
-
-[data-testid="stMetric"] {
-
-    background:
-    linear-gradient(
-    135deg,
-    rgba(99,102,241,0.25),
-    rgba(168,85,247,0.25)
-    );
-
-    border-radius:20px;
-
-    padding:20px;
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-}
-
-.stButton button {
-
-    background:
-    linear-gradient(
-        135deg,
-        #6366f1,
-        #8b5cf6
-    );
-
-    border:none;
-
-    color:white;
-
-    border-radius:16px;
-
-    font-weight:700;
-
-    height:50px;
-
-    width:100%;
-
-    box-shadow:
-    0 8px 20px rgba(99,102,241,0.5);
-}
-
-.stButton > button:hover {
-    background: #0077ed;
-    transform: translateY(-1px);
-    transition: 0.2s ease;
+    font-weight: 700 !important;
 }
 
 .stTextInput input,
 .stTextArea textarea,
 .stNumberInput input,
 .stDateInput input {
-    border-radius: 14px;
-    border: 1px solid #d2d2d7;
+    background: rgba(255,255,255,0.96) !important;
+    color: #111827 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 14px !important;
+    font-weight: 600 !important;
+}
+
+.stButton > button {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 16px !important;
+    font-weight: 800 !important;
+    min-height: 48px;
+    box-shadow: 0 10px 24px rgba(99,102,241,0.35);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+    box-shadow: 0 14px 30px rgba(99,102,241,0.45);
+}
+
+.card,
+[data-testid="stMetric"] {
+    background: rgba(255,255,255,0.88) !important;
+    backdrop-filter: blur(16px);
+    border-radius: 22px !important;
+    border: 1px solid rgba(255,255,255,0.7) !important;
+    box-shadow: 0 10px 28px rgba(15,23,42,0.08);
+    color: #1e293b !important;
 }
 
 div[data-testid="stDataFrame"] {
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 28px rgba(15,23,42,0.08);
+}
+
+h1, h2, h3, h4, p, span {
+    color: #1e293b;
 }
 
 .high-risk {
     padding: 8px 12px;
     border-radius: 999px;
-    background-color: #ffebeb;
-    color: #b42318;
-    font-weight: 700;
+    background-color: #fee2e2;
+    color: #991b1b;
+    font-weight: 800;
 }
 
 .medium-risk {
     padding: 8px 12px;
     border-radius: 999px;
-    background-color: #fff4d6;
-    color: #936600;
-    font-weight: 700;
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: 800;
 }
 
 .low-risk {
     padding: 8px 12px;
     border-radius: 999px;
-    background-color: #e8f8ef;
-    color: #137333;
-    font-weight: 700;
+    background-color: #dcfce7;
+    color: #166534;
+    font-weight: 800;
 }
-
-
-
 </style>
 """, unsafe_allow_html=True)
-
 
 # =====================
 # DATABASE
