@@ -1,0 +1,14 @@
+StudyPilot AI User Testing Survey Questions
+
+Use these questions in Google Forms or inside the app.
+
+1. What grade are you in?
+2. How often do you forget assignments?
+3. How often do you procrastinate on large assignments?
+4. How easy was StudyPilot AI to use? (1-5)
+5. How useful was the Homework Planner? (1-5)
+6. How useful was the Grade Recovery Calculator? (1-5)
+7. How useful was the AI Study Advisor? (1-5)
+8. Would you recommend this app to another student? (1-5)
+9. What feature should be improved?
+10. What feature should be added next?
