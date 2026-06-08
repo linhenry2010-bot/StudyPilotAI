@@ -50,7 +50,7 @@ section[data-testid="stSidebar"] {
 
 .main-title {
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 500;
     color: #1e293b !important;
     background: none !important;
     -webkit-text-fill-color: #1e293b !important;
